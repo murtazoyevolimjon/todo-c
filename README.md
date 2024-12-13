@@ -3,15 +3,6 @@
 ## Loyihaning Maqsadi
 Bu loyiha To-Do ro'yxatini boshqarish uchun dastur yaratishdir. Foydalanuvchilar vazifalarni qo'shish, ro'yxatlash, o'qish, o'chirish, "Completed" yoki "Incomplete" holatiga o'tkazish imkoniyatiga ega bo'lishadi.
 
-## Asosiy Funktsiyalar
-1. **Add Task (Vazifa qo'shish)**: Yangi vazifa qo'shish imkoniyati.
-2. **List Tasks (Vazifalarni ro'yxatlash)**: Barcha vazifalarni ko'rsatish.
-3. **Get Task (Vazifani olish)**: Belgilangan ID orqali vazifani ko'rsatish.
-4. **Delete Task (Vazifani o'chirish)**: Belgilangan ID orqali vazifani o'chirish.
-5. **Mark Task as Completed (Vazifani "Completed" deb belgilash)**: Vazifani tugallangan deb belgilash.
-6. **Mark Task as Incompleted (Vazifani "Incomplete" deb belgilash)**: Vazifani tugallanmagan deb belgilash.
-7. **Menu**: Foydalanuvchiga barcha imkoniyatlarni ko'rsatuvchi menyu.
-
 ## Loyihaning Tuzilishi
 
 ### `Task` Struct:
@@ -28,7 +19,7 @@ Bu struktura har bir vazifaning ma'lumotlarini saqlaydi:
 5. **mark_completed**: Vazifani "Completed" deb belgilash.
 6. **mark_incomplete**: Vazifani "Incomplete" deb belgilash.
 7. **menu**: Foydalanuvchiga menyuni ko'rsatish va tanlov qilish imkoniyatini beradi.
-8. 
+
 ## Dastur Ishlash Tamoyili
 
 1. **Dastur boshlanganda menyu chiqadi**: 
@@ -116,42 +107,3 @@ Bu struktura har bir vazifaning ma'lumotlarini saqlaydi:
    ./todo
    ```
 3. Dastur sizga menyu orqali vazifalar ro'yxatini boshqarish imkonini beradi.
-
-## Misollar
-
-### Vazifani Qo'shish
-Foydalanuvchi yangi vazifani quyidagi tarzda qo'shishi mumkin:
-```
-Enter task title: Buyurtma qilish
-Enter task description: Buyurtma qilishni yakunlash
-```
-
-### Vazifalarni Ro'yxatlash
-Barcha vazifalar quyidagicha ko'rsatiladi:
-```
-ID   | Title           | Description                   | Status
------------------------------------------------------------
-1    | Buyurtma qilish | Buyurtma qilishni yakunlash   | Bajarilmagan
-2    | Kitob o'qish    | Kitobni tugatish              | Bajarilgan
-```
-
-### Vazifani O'chirish
-Foydalanuvchi vazifani o'chirishi mumkin:
-```
-Enter task ID to delete: 1
-Task deleted successfully.
-```
-
-### Vazifani "Completed" deb belgilash
-Foydalanuvchi vazifani tugallangan deb belgilashi mumkin:
-```
-Enter task ID to mark as Completed: 1
-Task marked as Completed!
-```
-
-### Vazifani "Incomplete" deb belgilash
-Foydalanuvchi vazifani tugallanmagan deb belgilashi mumkin:
-```
-Enter task ID to mark as Incompleted: 1
-Task marked as Incompleted!
-```
