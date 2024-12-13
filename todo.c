@@ -1,7 +1,8 @@
 // Task strukturasini yaratamiz
 typedef struct {
-    char title[100];  // Vazifaning nomi
-    int status;       // 1 - "Completed", 0 - "Incomplete"
+    char title[128];  // Vazifaning nomi
+    char description[512];
+    int status;       // 1 - "Bajarilgan", 0 - "Bajarilmagan"
 } Task;
 
 Task tasks[100];  // Vazifalar ro'yxati
