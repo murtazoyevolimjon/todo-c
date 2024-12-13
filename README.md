@@ -16,40 +16,19 @@ Bu loyiha To-Do ro'yxatini boshqarish uchun dastur yaratishdir. Foydalanuvchilar
 
 ### `Task` Struct:
 Bu struktura har bir vazifaning ma'lumotlarini saqlaydi:
-- `id`: int (Vazifaning unikal identifikatori)
 - `title`: char[] (Vazifaning nomi)
 - `description`: char[] (Vazifaning tavsifi)
-- `status`: char[] (Vazifaning holati, masalan: "Not Completed", "Completed")
+- `status`: int (Vazifaning holati, masalan: 1 - "Bajarilgan", 0 - "Bajarilmagan")
 
 ### Funksiyalar
 1. **add_task**: Yangi vazifa qo'shish.
-    - **Kirish**: `title` (char*), `description` (char*)
-    - **Chiqish**: Hech narsa qaytarmaydi, faqat vazifani ro'yxatga qo'shadi.
-
 2. **list_tasks**: Barcha vazifalarni ro'yxatlash.
-    - **Kirish**: Yo'q
-    - **Chiqish**: Barcha vazifalar ro'yxatini konsolga chiqaradi.
-
 3. **get_task**: Belgilangan ID bilan vazifani olish.
-    - **Kirish**: `task_id` (int)
-    - **Chiqish**: Belgilangan IDga mos vazifa haqida ma'lumotni chiqaradi.
-
 4. **delete_task**: Belgilangan ID bilan vazifani o'chirish.
-    - **Kirish**: `task_id` (int)
-    - **Chiqish**: Vazifani o'chirib, ro'yxatni yangilaydi.
-
 5. **mark_completed**: Vazifani "Completed" deb belgilash.
-    - **Kirish**: `task_id` (int)
-    - **Chiqish**: Vazifani "Completed" deb belgilaydi va ro'yxatni yangilaydi.
-
 6. **mark_incomplete**: Vazifani "Incomplete" deb belgilash.
-    - **Kirish**: `task_id` (int)
-    - **Chiqish**: Vazifani "Incomplete" deb belgilaydi va ro'yxatni yangilaydi.
-
 7. **menu**: Foydalanuvchiga menyuni ko'rsatish va tanlov qilish imkoniyatini beradi.
-    - **Kirish**: Yo'q
-    - **Chiqish**: Foydalanuvchidan tanlovni oladi va tegishli funksiyani chaqiradi.
-
+8. 
 ## Dastur Ishlash Tamoyili
 
 1. **Dastur boshlanganda menyu chiqadi**: 
@@ -83,8 +62,8 @@ Bu struktura har bir vazifaning ma'lumotlarini saqlaydi:
      ```
      ID   | Title           | Description                   | Status
      -----------------------------------------------------------
-     1    | Buyurtma qilish | Buyurtma qilishni yakunlash   | Not Completed
-     2    | Kitob o'qish    | Kitobni tugatish              | Completed
+     1    | Buyurtma qilish | Buyurtma qilishni yakunlash   | Bajarilmagan
+     2    | Kitob o'qish    | Kitobni tugatish              | Bajarilgan
      ```
 
 4. **Vazifani o'qish**:
@@ -93,10 +72,10 @@ Bu struktura har bir vazifaning ma'lumotlarini saqlaydi:
    - Misol:
      ```
      Enter task ID to get: 1
-     Task ID: 1
+     
      Title: Buyurtma qilish
      Description: Buyurtma qilishni yakunlash
-     Status: Not Completed
+     Status: Bajarilmagan
      ```
 
 5. **Vazifani o'chirish**:
@@ -152,8 +131,8 @@ Barcha vazifalar quyidagicha ko'rsatiladi:
 ```
 ID   | Title           | Description                   | Status
 -----------------------------------------------------------
-1    | Buyurtma qilish | Buyurtma qilishni yakunlash   | Not Completed
-2    | Kitob o'qish    | Kitobni tugatish              | Completed
+1    | Buyurtma qilish | Buyurtma qilishni yakunlash   | Bajarilmagan
+2    | Kitob o'qish    | Kitobni tugatish              | Bajarilgan
 ```
 
 ### Vazifani O'chirish
